@@ -1,11 +1,11 @@
-@import url(reset.css);
-
-a,a:visited,i{
+  a,a:visited,i{
   color: #fff;
   text-decoration: none;
 }
 
-#wrap{width: 100%;height: 100%;background: #141414; color: #fff;overflow-x: hidden;}
+@media screen and (min-width: 1025px) {
+
+  #wrap{width: 100%;height: 100%;background: #141414; color: #fff;overflow-x: hidden;}
   #header{z-index: 30;position:fixed;width: 100%;background: transparent;transition: all 0.4s ease 0s;}
     .header_wrap{margin: 0 70px;line-height: 60px;}
     .header_inner{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
@@ -36,21 +36,18 @@ h1.logo>a{display: block; width: 116px;background: url(../images/Netflix_Logo_PM
 .search>ul>li:first-child>button>input.on::placeholder{color: #ccc; }
 .search>ul>li:first-child>button>input.on{transform: scaleX(1);}
 
-
-
 .search>ul>li:last-child{position: relative;padding-left: 50px;background: url(../images/profile.png)no-repeat 0 50%;cursor: pointer;margin-left: 10px;}
 .search>ul>li:last-child>div{display: none;}
 .search>ul>li:last-child>div>div{display: flex;flex-direction: column;justify-items: flex-start;line-height: 45px;padding: 10px; background: rgba(0, 0, 0, 0.8);position: absolute;right: 0;top: 70px;width: 170px;}
 .search>ul>li:last-child.on>div{display: block;}
 
 .search>ul>li:last-child>div>div>ul>li:nth-of-type(2){line-height: 35px;}
+.right_button{border:none;border-top:1px solid #ccc;background:none;outline: none;background: transparent;color: #fff;box-shadow: none;text-align: center;padding: 5px;margin-left: 7px;cursor: pointer;}
 
 
 /* main */
 /* main_banner */
-.main_banner{}
-.banner_inner{position:absolute; left: 75px;top: 160px;
-  display: flex;flex-direction: column; justify-content:baseline;}
+.banner_inner{position:absolute; left: 75px;top: 160px; display: flex;flex-direction: column; justify-content:baseline;}
 .banner_inner>div>h2{width: 550px;height:240px;background: url(../images/main_ban_logo.webp) no-repeat 0 0;background-size: 100%;text-indent: -9999px;overflow: hidden;}
 .banner_inner>div{margin-top: 10px;}
 .banner_inner>div>p{margin-top: 10px;}
@@ -72,16 +69,20 @@ h1.logo>a{display: block; width: 116px;background: url(../images/Netflix_Logo_PM
 
 #main>section{position: relative;margin-bottom: 80px;}
 #main>section>h2{font-size: 1.2rem;margin-bottom: 20px;}
-#main>section>ul{display: flex;flex-direction: row;width: 200%;}
+#main>section>ul{position:relative;left: 0;display: flex;flex-direction: row;width: 200%; transition: all 0.3s ease 0s;}
 #main>section>ul>li>div>ul{display: flex;flex-direction: row;justify-content:space-between;flex-wrap: nowrap;}
-#main>section>ul>li>div>ul>li{border-radius: 5px;flex: 1; }
-#main>section>ul>li>div>ul>li>img{width: 97%;border-radius: 5px;}
+#main>section>ul>li>div>ul>li{margin-right: 1vw;}
+#main>section>ul>li>div>ul>li>img{width: 14vw;border-radius: 5px;}
 
-#main>section>div{position: absolute;bottom: 0;width: 70px;height: 73.5%;text-align: center;font-size: 1.3rem;cursor: pointer;opacity: 0;transition: 0.3s ease 0s;}
+#main>section>div{z-index: 20;position: absolute;bottom: 0;width: 70px;height: 73.5%;text-align: center;font-size: 1.3rem;cursor: pointer;opacity: 0;transition: 0.3s ease 0s;}
 #main>section>div>i{position: absolute;top: 50%;transform: translateY(-50%);z-index: 10;}
 #main>section>div.on{background: rgba(0, 0, 0, 0.4);opacity: 1;}
 #main>section>div.arrow_left{left: -70px;border-radius: 0 5px 5px 0;}
 #main>section>div.arrow_right{right: -70px;border-radius: 5px 0 0 5px;}
+
+#main>section:nth-of-type(4)>ul>li>div>ul>li>img{width: 16vw;}
+#main>section:nth-of-type(4)>div{height: 89%;}
+
 
 /* footer */
 .foot_inner{margin: 0 300px; display: flex;flex-direction: column;color: #ccc;line-height: 2;}
@@ -91,3 +92,12 @@ h1.logo>a{display: block; width: 116px;background: url(../images/Netflix_Logo_PM
 .foot_inner>ul:nth-of-type(2)>li{width: 25%;}
 .foot_inner>button{padding: 5px;background: none;outline: none;border: 2px solid #ccc;width: 100px; color: #ccc;margin-bottom: 20px;}
 .foot_inner>address{margin-bottom: 20px;font-size: 0.7rem;}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px) {
+  
+}
+
+

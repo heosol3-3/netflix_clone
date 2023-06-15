@@ -37,24 +37,34 @@ profile.addEventListener("mouseleave",e=>{
   e.currentTarget.classList.remove("on");
 })
 
+let uls = document.querySelectorAll("#main>section>ul");
+console.log(uls);
 let arrow_left = document.querySelector("#main>section>div.arrow_left");
 
 arrow_left.addEventListener("click",e=>{
   e.preventDefault();
-
-})
+  let ul = e.currentTarget.parentNode.querySelector("ul");
+  let width = ul.firstElementChild.offsetWidth;
+  ul.style.left = 0
+})  
 
 let arrow_right = document.querySelector("#main>section>div.arrow_right");
 
+arrow_right.addEventListener("click",e=>{
+  e.preventDefault();
+  let ul = e.currentTarget.parentNode.querySelector("ul");
+  let width = ul.firstElementChild.offsetWidth;
+  ul.style.left = `-${width}px`;
+})  
 
 let arrow = document.querySelectorAll("#main>section>div");
 console.log(arrow);
 for(el of arrow){
   el.addEventListener("mouseover",e=>{
     e.currentTarget.classList.add("on");
-  })
+  })  
   el.addEventListener("mouseleave",e=>{
     e.currentTarget.classList.remove("on");
-  })
-}
+  })  
+}  
 
