@@ -2,6 +2,187 @@
   color: #fff;
   text-decoration: none;
 }
+@media screen and (max-width: 768px) {
+  #wrap{width: 100%;height: 100%;background: #141414; color: #fff;overflow-x: hidden;}
+  #header{z-index: 30;position:fixed;width: 100%;background: transparent;transition: all 0.4s ease 0s;}
+    .header_wrap{margin: 0 5vw;line-height: 60px;}
+    .header_inner{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+      .header_left{display: flex;justify-content: center;}
+      .header_right{display: flex;flex-direction: row;justify-content: center;}
+  #main{position: relative;width: 100%;display: flex;flex-direction: column;}
+    .main_banner{width: 100%; height: 90vh;background: linear-gradient(to bottom, transparent, 70%, #141414),url(../images/main_ban_bak.webp) no-repeat 0 0;background-size: 100%; display: flex; flex-direction: column;}
+    #main>section{margin: 0 5vw;}
+  #footer{position: relative;}
+    #foot_wrap{}
+      #foot_inner{display: flex;flex-direction: column;justify-content: space-around;}
+
+/* header_left */
+h1.logo>a{display: block; width: 20vw;background: url(../images/Netflix_Logo_PMS.png) no-repeat 0 90%;overflow: hidden;text-indent: -9999px; background-size: 100% }
+.gnb{display: none;}
+.gnb>ul{display: flex; padding: 5px;}
+.gnb>ul>li{padding: 0 10px;}
+.gnb>ul>li>a{transition: all 0.3s ease 0s;}
+.gnb>ul>li>a:hover{color: rgba(255, 255, 255, 0.7);}
+/* header_right */
+.search>ul{display: flex;}
+.search>ul>li{padding: 0 10px;}
+.search>ul>li:first-child>button{border: none;background: transparent; transition: all 0.5s ease 0s;width: 10px;height: 40px;}
+.search>ul>li:first-child>button.on{border: 1px solid #fff;background: rgba(109, 109, 110,0.7);width: 230px;}
+.search>ul>li:first-child>button>label{cursor: pointer;transition: all 0.5s ease 0s;}
+
+.search>ul>li:first-child>button>input{display: inline-block;transform-origin: right center;transform: scaleX(0);transition: all 0.5s ease 0s;border:none;margin-left: 10px;background: none;}
+.search>ul>li:first-child>button>input::placeholder{color: transparent;}
+.search>ul>li:first-child>button>input.on::placeholder{color: #ccc; }
+.search>ul>li:first-child>button>input.on{transform: scaleX(1);}
+
+.search>ul>li:last-child{position: relative;padding-left: 50px;background: url(../images/profile.png)no-repeat 0 50%;cursor: pointer;margin-left: 10px;}
+.search>ul>li:last-child>div{display: none;}
+.search>ul>li:last-child>div>div{display: flex;flex-direction: column;justify-items: flex-start;line-height: 45px;padding: 10px; background: rgba(0, 0, 0, 0.8);position: absolute;right: 0;top: 70px;width: 170px;}
+.search>ul>li:last-child.on>div{display: block;}
+
+.search>ul>li:last-child>div>div>ul>li:nth-of-type(2){line-height: 35px;}
+.right_button{border:none;border-top:1px solid #ccc;background:none;outline: none;background: transparent;color: #fff;box-shadow: none;text-align: center;padding: 5px;margin-left: 7px;cursor: pointer;}
+
+
+/* main */
+/* main_banner */
+.banner_inner{position:absolute; left: 5vw;top: 5vh; display: flex;flex-direction: column; justify-content:baseline;}
+.banner_inner>div>h2{width: 40vw;height:10vh;background: url(../images/main_ban_logo.webp) no-repeat 0 0;background-size: 100%;text-indent: -9999px;overflow: hidden;}
+.banner_inner>div{margin-top: 10px;}
+.banner_inner>div>p{margin-top: 10px;}
+.banner_inner>div>p:first-of-type{font-size: 1rem;line-height: 20px;}
+.banner_inner>div>p:first-of-type>span{display:inline-block;width: 20px;height:20px;font-size: 0.5rem;background: #c52e37;border-radius: 20%;text-align: center;font-weight: bold;}
+.banner_inner>div>p:last-of-type{width: 50vw;font-size: 0.3rem;text-align: justify;}
+
+.play_btn>button{background: none;border: none; font-size: 0.5rem;padding: 1vw 3vh;border-radius: 5px; font-weight: bold;}
+.play_btn>button:first-of-type{background: #fff;}
+.play_btn>button:first-of-type:hover{background: rgba(255, 255, 255, 0.7);}
+.play_btn>button:first-of-type>i{color: #000;}
+.play_btn>button:last-of-type{background: rgba(109, 109, 110,0.4); color: #fff;margin-left: 10px;}
+.play_btn>button:last-of-type:hover{background: rgba(109, 109, 110, 0.7);}
+
+.year{position: absolute;right: 0;top: 580px;width: 100px;height: 40px;background: rgba(109, 109, 110,0.4);border-left: 3px solid #ccc;padding: 5px;box-sizing: border-box;}
+.year>span{display: inline-block;width: 30px;height: 30px;background: #c52e37;border-radius: 5px;font-size: 1.3rem;text-align: center;font-weight: bold;text-indent: -1px;}
+
+/* content */
+
+#main>section{position: relative;margin-bottom: 80px;}
+#main>section>h2{font-size: 1.2rem;margin-bottom: 20px;}
+#main>section>ul{position:relative;left: 0;display: flex;flex-direction: row;width: 200%; transition: all 0.3s ease 0s;}
+#main>section>ul>li>div>ul{display: flex;flex-direction: row;justify-content:space-between;flex-wrap: nowrap;}
+#main>section>ul>li>div>ul>li{margin-right: 1vw;}
+#main>section>ul>li>div>ul>li>img{width: 30vw;border-radius: 5px;}
+
+#main>section>div{z-index: 20;position: absolute;bottom: 0;width: 5vw;height: 10vh;text-align: center;font-size: 1.3rem;cursor: pointer;opacity: 0;transition: 0.3s ease 0s;}
+#main>section>div>i{position: absolute;top: 50%;transform: translateY(-50%);z-index: 10;}
+#main>section>div.on{background: rgba(0, 0, 0, 0.4);opacity: 1;}
+#main>section>div.arrow_left{left: -5vw;border-radius: 0 5px 5px 0;}
+#main>section>div.arrow_right{right: -5vw;border-radius: 5px 0 0 5px;}
+
+#main>section:nth-of-type(4)>ul>li>div>ul>li>img{width: 30vw;}
+#main>section:nth-of-type(4)>div{height: 89%;}
+
+
+/* footer */
+.foot_inner{margin: 0 20vw; display: flex;flex-direction: column;color: #ccc;line-height: 2;}
+.foot_inner>ul:first-of-type{display: flex;}
+.foot_inner>ul:first-of-type>li{font-size:1.5rem;margin-right: 30px;}
+.foot_inner>ul:nth-of-type(2){display: flex;flex-wrap: wrap;margin-bottom: 20px;}
+.foot_inner>ul:nth-of-type(2)>li{width: 25%;}
+.foot_inner>button{padding: 5px;background: none;outline: none;border: 2px solid #ccc;width: 100px; color: #ccc;margin-bottom: 20px;}
+.foot_inner>address{margin-bottom: 20px;font-size: 0.7rem;}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #wrap{width: 100%;height: 100%;background: #141414; color: #fff;overflow-x: hidden;}
+  #header{z-index: 30;position:fixed;width: 100%;background: transparent;transition: all 0.4s ease 0s;}
+    .header_wrap{margin: 0 5vw;line-height: 60px;}
+    .header_inner{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+      .header_left{display: flex;justify-content: center;}
+      .header_right{display: flex;flex-direction: row;justify-content: center;}
+  #main{position: relative;width: 100%;display: flex;flex-direction: column;}
+    .main_banner{width: 100%; height: 90vh;background: linear-gradient(to bottom, transparent, 70%, #141414),url(../images/main_ban_bak.webp) no-repeat 0 0;background-size: cover; display: flex; flex-direction: column;}
+    #main>section{margin: 0 5vw;}
+  #footer{position: relative;}
+    #foot_wrap{}
+      #foot_inner{display: flex;flex-direction: column;justify-content: space-around;}
+
+/* header_left */
+h1.logo>a{display: block; width: 10vw;background: url(../images/Netflix_Logo_PMS.png) no-repeat 0 90%;overflow: hidden;text-indent: -9999px; background-size: 100% }
+.gnb>ul{display: flex; padding: 5px;}
+.gnb>ul>li{padding: 0 10px;}
+.gnb>ul>li>a{transition: all 0.3s ease 0s;}
+.gnb>ul>li>a:hover{color: rgba(255, 255, 255, 0.7);}
+/* header_right */
+.search>ul{display: flex;}
+.search>ul>li{padding: 0 10px;}
+.search>ul>li:first-child>button{border: none;background: transparent; transition: all 0.5s ease 0s;width: 10px;height: 40px;}
+.search>ul>li:first-child>button.on{border: 1px solid #fff;background: rgba(109, 109, 110,0.7);width: 230px;}
+.search>ul>li:first-child>button>label{cursor: pointer;transition: all 0.5s ease 0s;}
+
+.search>ul>li:first-child>button>input{display: inline-block;transform-origin: right center;transform: scaleX(0);transition: all 0.5s ease 0s;border:none;margin-left: 10px;background: none;}
+.search>ul>li:first-child>button>input::placeholder{color: transparent;}
+.search>ul>li:first-child>button>input.on::placeholder{color: #ccc; }
+.search>ul>li:first-child>button>input.on{transform: scaleX(1);}
+
+.search>ul>li:last-child{position: relative;padding-left: 50px;background: url(../images/profile.png)no-repeat 0 50%;cursor: pointer;margin-left: 10px;}
+.search>ul>li:last-child>div{display: none;}
+.search>ul>li:last-child>div>div{display: flex;flex-direction: column;justify-items: flex-start;line-height: 45px;padding: 10px; background: rgba(0, 0, 0, 0.8);position: absolute;right: 0;top: 70px;width: 170px;}
+.search>ul>li:last-child.on>div{display: block;}
+
+.search>ul>li:last-child>div>div>ul>li:nth-of-type(2){line-height: 35px;}
+.right_button{border:none;border-top:1px solid #ccc;background:none;outline: none;background: transparent;color: #fff;box-shadow: none;text-align: center;padding: 5px;margin-left: 7px;cursor: pointer;}
+
+
+/* main */
+/* main_banner */
+.banner_inner{position:absolute; left: 5vw;top: 160px; display: flex;flex-direction: column; justify-content:baseline;}
+.banner_inner>div>h2{width: 550px;height:240px;background: url(../images/main_ban_logo.webp) no-repeat 0 0;background-size: 100%;text-indent: -9999px;overflow: hidden;}
+.banner_inner>div{margin-top: 10px;}
+.banner_inner>div>p{margin-top: 10px;}
+.banner_inner>div>p:first-of-type{font-size: 1.5rem;line-height: 40px;}
+.banner_inner>div>p:first-of-type>span{display:inline-block;width: 40px;height:40px;font-size: 1rem;background: #c52e37;border-radius: 20%;text-align: center;font-weight: bold;}
+.banner_inner>div>p:last-of-type{width: 550px;font-size: 1.1rem;text-align: justify;}
+
+.play_btn>button{background: none;border: none; font-size: 1.1rem;padding: 10px 40px;border-radius: 5px; font-weight: bold;}
+.play_btn>button:first-of-type{background: #fff;}
+.play_btn>button:first-of-type:hover{background: rgba(255, 255, 255, 0.7);}
+.play_btn>button:first-of-type>i{color: #000;}
+.play_btn>button:last-of-type{background: rgba(109, 109, 110,0.4); color: #fff;margin-left: 10px;}
+.play_btn>button:last-of-type:hover{background: rgba(109, 109, 110, 0.7);}
+
+.year{position: absolute;right: 0;top: 580px;width: 100px;height: 40px;background: rgba(109, 109, 110,0.4);border-left: 3px solid #ccc;padding: 5px;box-sizing: border-box;}
+.year>span{display: inline-block;width: 30px;height: 30px;background: #c52e37;border-radius: 5px;font-size: 1.3rem;text-align: center;font-weight: bold;text-indent: -1px;}
+
+/* content */
+
+#main>section{position: relative;margin-bottom: 80px;}
+#main>section>h2{font-size: 1.2rem;margin-bottom: 20px;}
+#main>section>ul{position:relative;left: 0;display: flex;flex-direction: row;width: 200%; transition: all 0.3s ease 0s;}
+#main>section>ul>li>div>ul{display: flex;flex-direction: row;justify-content:space-between;flex-wrap: nowrap;}
+#main>section>ul>li>div>ul>li{margin-right: 1vw;}
+#main>section>ul>li>div>ul>li>img{width: 20vw;border-radius: 5px;}
+
+#main>section>div{z-index: 20;position: absolute;bottom: 0;width: 5vw;height: 10vh;text-align: center;font-size: 1.3rem;cursor: pointer;opacity: 0;transition: 0.3s ease 0s;}
+#main>section>div>i{position: absolute;top: 50%;transform: translateY(-50%);z-index: 10;}
+#main>section>div.on{background: rgba(0, 0, 0, 0.4);opacity: 1;}
+#main>section>div.arrow_left{left: -5vw;border-radius: 0 5px 5px 0;}
+#main>section>div.arrow_right{right: -5vw;border-radius: 5px 0 0 5px;}
+
+#main>section:nth-of-type(4)>ul>li>div>ul>li>img{width: 16vw;}
+#main>section:nth-of-type(4)>div{height: 89%;}
+
+
+/* footer */
+.foot_inner{margin: 0 20vw; display: flex;flex-direction: column;color: #ccc;line-height: 2;}
+.foot_inner>ul:first-of-type{display: flex;}
+.foot_inner>ul:first-of-type>li{font-size:1.5rem;margin-right: 30px;}
+.foot_inner>ul:nth-of-type(2){display: flex;flex-wrap: wrap;margin-bottom: 20px;}
+.foot_inner>ul:nth-of-type(2)>li{width: 25%;}
+.foot_inner>button{padding: 5px;background: none;outline: none;border: 2px solid #ccc;width: 100px; color: #ccc;margin-bottom: 20px;}
+.foot_inner>address{margin-bottom: 20px;font-size: 0.7rem;}
+}
+
 
 @media screen and (min-width: 1025px) {
 
@@ -93,11 +274,3 @@ h1.logo>a{display: block; width: 116px;background: url(../images/Netflix_Logo_PM
 .foot_inner>button{padding: 5px;background: none;outline: none;border: 2px solid #ccc;width: 100px; color: #ccc;margin-bottom: 20px;}
 .foot_inner>address{margin-bottom: 20px;font-size: 0.7rem;}
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-}
-@media screen and (max-width: 768px) {
-  
-}
-
-

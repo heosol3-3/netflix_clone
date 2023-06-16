@@ -1,13 +1,12 @@
 @import url(reset.css);
 @import url(main.css);
 
-@media screen and (min-width: 1025px) {
-  body{font-size: 0.85rem;}
+@media screen and (max-width: 768px) {
+  body{font-size: 0.5rem;}
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   body{font-size: 0.5rem;}
 }
-@media screen and (max-width: 768px) {
-  
+@media screen and (min-width: 1025px) {
+  body{font-size: 0.85rem;}
 }
-
